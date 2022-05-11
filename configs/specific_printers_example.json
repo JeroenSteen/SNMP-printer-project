@@ -1,0 +1,63 @@
+{
+
+	"XeroxC60": {
+		"IP": "",
+		"SNMP_NUMBER_OF_PRINTED_BLACKS": "SNMPv2-SMI::enterprises.253.8.53.13.2.1.6.1.20.34",
+		"SNMP_NUMBER_OF_PRINTED_COLORS": "SNMPv2-SMI::enterprises.253.8.53.13.2.1.6.1.20.33",
+		"SNMP_SUPPLIES_MAX_CAPACITY_SLOTS": {
+			"YELLOW_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.2",
+			"MAGENTA_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.3",
+			"CYAN_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.4",
+
+			"WASTE_CONTAINER": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.5",
+
+			"BLACK_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.6",
+			"YELLOW_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.7",
+			"MAGENTA_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.8",
+			"CYAN_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.9",
+
+			"FUSER_ASSEMBLY": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.12",
+
+			"BLACK_TONER_1": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.30",
+			"BLACK_TONER_2": "SNMPv2-SMI::mib-2.43.11.1.1.8.1.31"
+		},
+		"SNMP_SUPPLIES_ACTUAL_CAPACITY_SLOTS": {
+			"YELLOW_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.2",
+			"MAGENTA_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.3",
+			"CYAN_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.4",
+
+			"WASTE_CONTAINER": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.5",
+
+			"BLACK_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.6",
+			"YELLOW_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.7",
+			"MAGENTA_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.8",
+			"CYAN_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.9",
+
+			"FUSER_ASSEMBLY": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.12",
+
+			"BLACK_TONER_1": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.30",
+			"BLACK_TONER_2": "SNMPv2-SMI::mib-2.43.11.1.1.9.1.31"
+		},
+		"SNMP_SUPPLIES_TYPE_NAMES": {
+			"YELLOW_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.2",
+			"MAGENTA_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.3",
+			"CYAN_TONER": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.4",
+
+			"WASTE_CONTAINER": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.5",
+
+			"BLACK_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.6",
+			"YELLOW_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.7",
+			"MAGENTA_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.8",
+			"CYAN_DRUM": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.9",
+
+			"FUSER_ASSEMBLY": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.12",
+
+			"BLACK_TONER_1": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.30",
+			"BLACK_TONER_2": "SNMPv2-SMI::mib-2.43.11.1.1.6.1.31"
+		}
+	},
+	"XeroxW7545": {
+		"IP": ""
+	}
+	
+}
