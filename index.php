@@ -6,7 +6,11 @@ snmp_read_mib($_SERVER['MIBDIRS'].'SNMPv2-SMI.txt');
 $generalPrintersConfigs = json_decode(file_get_contents("./configs/general_printers.json"), true);
 $specificPrintersConfigs = json_decode(file_get_contents("./configs/specific_printers.json"), true);
 
+
+echo "<div class='row'>";
 foreach($specificPrintersConfigs as $specificPrintersConfigKey => $specificPrintersConfig) {
+
+    echo "<div class='column'>";
     
     $printer = new Printer(
         array_merge($generalPrintersConfigs, $specificPrintersConfig)
@@ -27,8 +31,13 @@ foreach($specificPrintersConfigs as $specificPrintersConfigKey => $specificPrint
         echo "<strong style='background: cyan; color: black;'>Cyan [C]:</strong> ".$printer->getCyanTonerLevel()."%</br>";
         echo "<strong style='background: magenta; color: black;'>Magenta [M]:</strong> ".$printer->getMagentaTonerLevel()."%</br>";
         echo "<strong style='background: yellow; color: black;'>Yellow [Y]:</strong> ".$printer->getYellowTonerLevel()."%</br>";
-        echo "<strong style='background: black; color: white;'>Black [K1]:</strong> : ".$printer->getBlackTonerFirstLevel()."%</br>";
-        echo "<strong style='background: black; color: white;'>Black [K2]:</strong> ".$printer->getBlackTonerSecondLevel()."%</br>";
+
+        if($printer->isOneBlackTonerPrinter()){
+            echo "<strong style='background: black; color: white;'>Black [K]:</strong> : ".$printer->getBlackTonerLevel()."%</br>";
+        } else if($printer->isTwoBlackTonerPrinter()) {
+            echo "<strong style='background: black; color: white;'>Black [K1]:</strong> : ".$printer->getBlackTonerFirstLevel()."%</br>";
+            echo "<strong style='background: black; color: white;'>Black [K2]:</strong> ".$printer->getBlackTonerSecondLevel()."%</br>";
+        }        
 
         echo "<h2>Drum levels:</h2>";
         echo "<strong style='background: cyan; color: black;'>Cyan [C]:</strong> ".$printer->getCyanDrumLevel()."%</br>";
@@ -45,5 +54,24 @@ foreach($specificPrintersConfigs as $specificPrintersConfigKey => $specificPrint
         echo $e->getMessage();
 
     }
+
+    echo "</div>";
     
 }
+echo "</div>";
+
+echo '
+<style>
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+';

@@ -26,6 +26,20 @@ class Printer extends AbstractPrinter {
         return $this->getSNMPInteger($this->config["SNMP_NUMBER_OF_PRINTED_COLORS"]);        
     }
 
+    public function isOneBlackTonerPrinter() {
+        if($this->config["BLACK_TONER_COUNT"] == 1) {
+            return true;
+        }
+        return false;
+    }
+
+    public function isTwoBlackTonerPrinter() {
+        if($this->config["BLACK_TONER_COUNT"] == 2) {
+            return true;
+        }
+        return false;
+    }
+
     public function getBlackTonerLevel() {
         return $this->getSubUnitPercentageLevel(
             $this->config["SNMP_SUPPLIES_MAX_CAPACITY_SLOTS"]["BLACK_TONER"],
@@ -77,6 +91,7 @@ class Printer extends AbstractPrinter {
         if($level == $this->config["MARKER_SUPPLIES_UNAVAILABLE"]) return "Remaining Unavailable";
         if($level == $this->config["MARKER_SUPPLIES_UNKNOWN"]) return "Unknown Remaining";
         if($level == $this->config["MARKER_SUPPLIES_SOME_REMAINING"]) return "Some Remaining";
+        return "Remaining of ".$level;
     }
 
     public function getFuserAssemblyLevel() {
